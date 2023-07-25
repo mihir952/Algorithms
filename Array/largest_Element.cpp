@@ -24,3 +24,24 @@ int main()
 
     return 0;
 }
+
+
+// 2nd Approach
+#include<iostream>
+#include<vector>
+using namespace std;
+
+
+int main(){
+  vector<int> arr={-1};
+  int largest=INT_MIN;
+  int largestelement=INT_MIN;
+  for(int i=0;i<arr.size();i++){
+    largest=max(arr[i],arr[i+1]);
+    if(largest>largestelement){
+        largestelement=largest;
+    }
+  }
+  cout<<"largest Element of an array is "<<largestelement<<endl;
+  return 0;
+}
